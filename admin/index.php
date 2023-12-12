@@ -1,5 +1,5 @@
 <?php
-    require "mysql.php";
+    require "config.php";
     if(isset($_POST["post_blog"])) {
         try {
             $date = strval(date("d M Y", strtotime("now")));
@@ -9,6 +9,19 @@
             $stmt->bindParam(":date", $date);
             $stmt->bindParam(":content", $_POST["quillContent"]);
             $stmt->execute();
+
+            $url = $discord_webhook;
+            $headers = [ 'Content-Type: application/json; charset=utf-8' ];
+            $POST = [ 'username' => 'Nejla Blogging - Update', 'content' => 'A new blog post was uploaded called: '.$_POST["blogging_title"] ];
+            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($POST));
+            $response   = curl_exec($ch);
         }catch(PDOException $e) {
             echo "Fehler: ". $e->getMessage();
         }
