@@ -1,5 +1,5 @@
 <?php
-    require "../admin/mysql.php";
+    require "../admin/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
