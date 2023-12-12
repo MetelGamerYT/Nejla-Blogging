@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +33,10 @@
         font-weight: bold;
         font-size: 13px;
         line-height: 24px;
+    }
+
+    .sidebar-body hr {
+        width: 50%;
     }
 
     .sidebar-header {
@@ -97,6 +100,7 @@
                 <a href="posts">
                     <div><span>&#128196 Posts</span></div>
                 </a>
+                <hr>
                 <div class="sidebar-header"><span>My Projects</span></div>
                 <a href="https://github.com/MetelGamerYT/MetelPlus">      
                     <div><img src="https://raw.githubusercontent.com/MetelGamerYT/MetelPlus/main/settings/webmedia/metelplus_logo.png" height="24" width="24" alt=""><span>MetelPlus - Streaming</span></div>
@@ -104,7 +108,21 @@
                 
                 <a href="https://github.com/MetelGamerYT/Single-Pages">
                 <div><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" height="24" width="24"><span>Single Pages</span></div>
-                </a></div>
+                </a>
+
+                <a href="https://github.com/MetelGamerYT/Nejla-Blogging">
+                <div><img src="https://i.imgur.com/6XhdPxi.png" alt="" height="24" width="24"><span>Nejla Blogging</span></div>
+                </a>
+            
+                <a href="https://github.com/MetelGamerYT/SandBox-Projects">
+                <div><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/S%26box_logo_new.png" alt="" height="24" width="24"><span>s&box Projects</span></div>
+                </a>
+
+                <a href="https://github.com/MetelGamerYT/GarrysMod-Addons">
+                <div><img src="https://steamuserimages-a.akamaihd.net/ugc/395553315328698553/C96F9BF14AE6439C24DD3292687A30B1DC498660/" alt="" height="24" width="24"><span>Garry's Mod Addons</span></div>
+                </a>
+
+                </div>
             </div>
         </div>
     </header>
